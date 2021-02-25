@@ -15,5 +15,5 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-​[![cocatrip's GitHub stats](https://github-readme-stats.vercel.app/api​?username=cocatrip​)]
+[![cocatrip's GitHub stats](https://github-readme-stats.vercel.app/api?username=cocatrip&show_icons=true&theme=radical)]
 <!--(https://github.com/anuraghazra/github-readme-stats)-->
