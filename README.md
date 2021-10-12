@@ -16,6 +16,8 @@ Here are some ideas to get you started:
 -->
 
 ![cocatrip's GitHub stats](https://github-readme-stats.vercel.app/api?username=cocatrip&show_icons=true&theme=merko)
-[![Most Used Language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cocatrip&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cocatrip&repo=anti-sp)](https://github.com/cocatrip/anti-sp)
+
+[![Most Used Language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cocatrip&layout=compact&theme=merko)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cocatrip&repo=anti-sp&theme=merko)](https://github.com/cocatrip/anti-sp)
 <!--(https://github.com/anuraghazra/github-readme-stats)-->
