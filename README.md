@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 
 ![cocatrip's GitHub stats](https://github-readme-stats.vercel.app/api?username=cocatrip&show_icons=true&theme=merko)
 
-[![Most Used Language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cocatrip&layout=compact&theme=merko)](https://github.com/anuraghazra/github-readme-stats)
+![Most Used Language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cocatrip&layout=compact&theme=merko&exclude_repo=onedark.nvim,rms-support-letter.github.io)
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cocatrip&repo=anti-sp&theme=merko)](https://github.com/cocatrip/anti-sp)
 <!--(https://github.com/anuraghazra/github-readme-stats)-->
