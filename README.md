@@ -16,7 +16,7 @@ Here are some ideas to get you started:
 -->
 ## Vian
 
-![banner](https://imgur.com/a/lOfRT7a.jpg)
+![banner](https://i.imgur.com/jOir9SL.png)
 
 <details>
 <summary>Stats</summary>
