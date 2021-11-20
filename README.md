@@ -25,8 +25,10 @@ Here are some ideas to get you started:
 
 ![Most Used Language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cocatrip&layout=compact&theme=merko&exclude_repo=dotfiles,onedark.nvim,rms-support-letter.github.io)
 
+<!--
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cocatrip&repo=anti-sp&theme=merko)](https://github.com/cocatrip/anti-sp)
 <!--(https://github.com/anuraghazra/github-readme-stats)-->
 </details>
+-->
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=cocatrip&label=visitors&color=5fad47&style=flat-square" alt="cocatrip" /> </p>
