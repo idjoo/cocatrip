@@ -27,8 +27,7 @@ Here are some ideas to get you started:
 
 <!--
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cocatrip&repo=anti-sp&theme=merko)](https://github.com/cocatrip/anti-sp)
-<!--(https://github.com/anuraghazra/github-readme-stats)-->
-</details>
 -->
+</details>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=cocatrip&label=visitors&color=5fad47&style=flat-square" alt="cocatrip" /> </p>
