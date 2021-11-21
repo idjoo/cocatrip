@@ -18,6 +18,8 @@ Here are some ideas to get you started:
 
 ![banner](https://i.imgur.com/jOir9SL.png)
 
+Gentoo • Neovim • DWM • Kitty • Zsh
+
 <details>
 <summary>Stats</summary>
 
