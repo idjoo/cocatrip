@@ -18,7 +18,10 @@ Here are some ideas to get you started:
 
 ![banner](https://i.imgur.com/jOir9SL.png)
 
-Gentoo • Neovim • DWM • Kitty • Zsh
+Just another linux enthusiast.
+
+I use:
+Gentoo • Neovim • Herbsluftwm • Polybar • Kitty
 
 <details>
 <summary>Stats</summary>
