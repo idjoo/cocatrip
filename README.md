@@ -21,6 +21,7 @@ Here are some ideas to get you started:
 Just another linux enthusiast.
 
 Visit my dotfiles!
+
 Dotfiles: https://github.com/cocatrip/dotfiles
 
 <details>
