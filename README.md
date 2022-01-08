@@ -21,6 +21,7 @@ Here are some ideas to get you started:
 Just another linux enthusiast.
 
 I use:
+
 Gentoo • Neovim • Herbsluftwm • Polybar • Kitty
 
 <details>
