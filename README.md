@@ -20,9 +20,8 @@ Here are some ideas to get you started:
 
 Just another linux enthusiast.
 
-I use:
-
-Gentoo • Neovim • Herbsluftwm • Polybar • Kitty
+Visit my dotfiles!
+Dotfiles: https://github.com/cocatrip/dotfiles
 
 <details>
 <summary>Stats</summary>
