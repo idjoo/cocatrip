@@ -13,10 +13,10 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+![banner](https://i.imgur.com/jOir9SL.png)
 -->
 ## Vian
 
-![banner](https://i.imgur.com/jOir9SL.png)
 ![banner](https://0x0.st/o-zt.png)
 
 Just another linux enthusiast.
