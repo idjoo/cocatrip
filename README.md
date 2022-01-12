@@ -17,6 +17,7 @@ Here are some ideas to get you started:
 ## Vian
 
 ![banner](https://i.imgur.com/jOir9SL.png)
+![banner](https://0x0.st/o-zt.png)
 
 Just another linux enthusiast.
 
