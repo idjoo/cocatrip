@@ -7,6 +7,7 @@ Just another linux enthusiast.
 Tools i use: [dotfiles](https://github.com/cocatrip/dotfiles)
 
 <details>
+
 <summary>Stats</summary>
 
 ![cocatrip's GitHub stats](https://github-readme-stats.vercel.app/api?username=cocatrip&show_icons=true&theme=merko)
