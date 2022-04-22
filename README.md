@@ -1,20 +1,3 @@
-<!--
-### Hi there 👋
-
-**cocatrip/cocatrip** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-![banner](https://i.imgur.com/jOir9SL.png)
--->
 ## Vian
 
 ![banner](https://0x0.st/o-zt.png)
@@ -30,9 +13,6 @@ Tools i use: [dotfiles](https://github.com/cocatrip/dotfiles)
 
 ![Most Used Language stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cocatrip&layout=compact&theme=merko&exclude_repo=dotfiles,onedark.nvim,rms-support-letter.github.io)
 
-<!--
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=cocatrip&repo=anti-sp&theme=merko)](https://github.com/cocatrip/anti-sp)
--->
 </details>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=cocatrip&label=visitors&color=5fad47&style=flat-square" alt="cocatrip" /> </p>
+<-- <p align="left"> <img src="https://komarev.com/ghpvc/?username=cocatrip&label=visitors&color=5fad47&style=flat-square" alt="cocatrip" /> </p> --!>
