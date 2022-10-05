@@ -1,0 +1,32 @@
+title: Profile
+quote: 
+  text: I prefer dangerous freedom over peaceful slavery.
+  author: Thomas Jefferson
+avatar: /img/logo.png
+name: Adrianus Vian
+alt-name: cocatrip
+desc: |
+  I am a student at Bina Nusantara University, majoring in Cyber Security. Love
+  using linux and been using it since 2019. Altough i major in Cyber Security i
+  don’t like doing Cyber Security stuff, it’s just a way for me to learn linux
+  and other stuff related to Infrastructure and Deployment. Rather than doing
+  Cyber Security stuff i’d prefer doing what i like the most and that is playing
+  with kubernetes, working on my homelab, deploying an application, and other
+  kind of stuff similar to that.
+techStack:
+- name: Linux
+  icon: linux-original
+- name: Jenkins
+  icon: jenkins-original
+- name: Bash
+  url: https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/SVG/64x64_white.svg
+- name: Neovim
+  url: https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg
+- name: Docker
+  icon: docker-original
+- name: Kubernetes
+  icon: kubernetes-plain
+- name: Go
+  icon: go-original
+- name: Python
+  icon: python-original

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  <title>{{ .Title }}</title>
+</head>
+<body>
+    <div id="avatar">
+      <img src="{{ .Avatar }}">
+    </div>
+
+    <h1 id="name">{{ .Name }}</h1>
+    <p id="alt-name">{{ .AltName }}</p>
+
+    <figure id="quote">
+      <blockquote>
+        <q>{{ .Quote.Text }}</q>
+
+        <span>
+          &mdash; {{ .Quote.Author }}
+        </span>
+      </blockquote>
+    </figure>
+
+    <p id="desc">{{ .Desc }}</p>
+
+    <h2 id="tech-stack"><a href="#tech-stack">Tech Stack</a></h2>
+    <table id="tech-stack-table">
+      {{ range .TechStack }}
+      <tr>
+        <td><p id="tech-name"><img id="tech-icon" src="{{ .Url }}" /> {{ .Name }}</p></td>
+      </tr>
+      {{ end }}
+    </table>
+
+    <h2 id="certs"><a href="#certs">Licenses & Certification</a></h2>
+    <table id="certs-table">
+      <tr>
+        <td>
+          <div data-iframe-width="175" data-iframe-height="240" data-share-badge-id="b93e45f7-d7c1-4c42-9c72-bc64b925412b" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+          <div data-iframe-width="175" data-iframe-height="240" data-share-badge-id="9db5804d-fe53-42f8-9f9b-c2d474ac3956" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+          <div data-iframe-width="175" data-iframe-height="240" data-share-badge-id="4fb0a5fd-ed6c-4071-af94-6a9b5c7b30a0" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </td>
+      </tr>
+    </table>
+
+    <a href="#" id="back-to-top">&#9650</a>
+</body>
+
+</html>
