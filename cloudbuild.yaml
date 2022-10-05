@@ -1,0 +1,29 @@
+steps:
+# build image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA', '.' ]
+  
+# push image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA']
+
+# deploy image
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args:
+  - 'run'
+  - 'deploy'
+  - 'cocatrip'
+  - '--service-account=cocatrip@ct-master.iam.gserviceaccount.com'
+  - '--image=asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA'
+  - '--region=asia-southeast1'
+  - '--allow-unauthenticated'
+  - '--port=8080'
+
+images:
+- 'asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+timeout: 7200s

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Emoji&display=swap');
+
+* {
+  font-family: 'Fira Code', monospace;
+  background-color: #293329;
+  color: #c5cac5;
+}
+
+html, body {
+  margin: 5%;
+  scroll-behavior: smooth;
+}
+
+#avatar {
+  text-align: center;
+}
+
+#avatar img {
+  border-radius: 5%;
+  width: 150px;
+  height: auto;
+}
+
+#name {
+  text-align: center;
+}
+
+#alt-name {
+  text-align: center;
+  font-style: italic;
+}
+
+#quote {
+  display: grid;
+}
+
+#quote blockquote {
+  text-align: center;
+  display: inline-grid;
+  justify-content: center;
+}
+
+#quote blockquote span {
+  text-align: right;
+}
+
+#desc {
+  text-align: justify;
+}
+
+table, th{
+  border: 1px dashed;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+#tech-stack {
+  text-align: center;
+}
+
+#tech-stack-table {
+  margin: 16px auto;
+  min-width: 15rem;
+}
+
+#tech-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#tech-icon, #tech-name {
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#certs {
+  text-align: center;
+}
+
+#certs-table {
+  margin: 16px auto;
+  min-width: 15rem;
+}
+
+#certs-table td {
+  text-align: center;
+}
+
+#back-to-top {
+	background: rgba(0, 0, 0, 0);
+  font-size: 3rem;
+  position: fixed;
+  bottom: 10px;
+  right: 20px; 
+}
