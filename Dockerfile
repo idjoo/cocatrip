@@ -1,6 +1,4 @@
-FROM golang:alpine
-
-ENV GIN_MODE=release
+FROM golang:alpine as builder
 
 WORKDIR /usr/src/app
 
@@ -12,4 +10,15 @@ COPY . .
 
 RUN go build -v -o /usr/local/bin/app ./...
 
-CMD ["app"]
+
+FROM golang:alpine
+
+ENV GIN_MODE=release
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+COPY --from=builder /usr/local/bin/app /usr/local/bin/app
+
+ENTRYPOINT ["app"]
