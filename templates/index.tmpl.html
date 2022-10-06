@@ -16,7 +16,7 @@
     </div>
 
     <h1 id="name">{{ .Name }}</h1>
-    <p id="alt-name">{{ .AltName }}</p>
+    <p id="alt-name">{{ .Alias }}</p>
 
     <figure id="quote">
       <blockquote>
@@ -43,9 +43,15 @@
     <table id="certs-table">
       <tr>
         <td>
-          <div data-iframe-width="175" data-iframe-height="240" data-share-badge-id="b93e45f7-d7c1-4c42-9c72-bc64b925412b" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div data-iframe-width="175" data-iframe-height="240" data-share-badge-id="9db5804d-fe53-42f8-9f9b-c2d474ac3956" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div data-iframe-width="175" data-iframe-height="240" data-share-badge-id="4fb0a5fd-ed6c-4071-af94-6a9b5c7b30a0" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        {{ range .Certs }}
+          <div id="certs-cards">
+            <img id="certs-image" src="{{ .Image }}">
+
+            <span id="certs-name">{{ .Name }}</span>
+
+            <div id="certs-issuer">{{ .Issuer }}</div>
+          </div>
+        {{ end }}
         </td>
       </tr>
     </table>

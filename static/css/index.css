@@ -7,7 +7,7 @@
 }
 
 html, body {
-  margin: 5%;
+  margin: 5% 10%;
   scroll-behavior: smooth;
 }
 
@@ -92,6 +92,32 @@ td {
 
 #certs-table td {
   text-align: center;
+  display: flex;
+}
+
+#certs-cards {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0px auto;
+}
+
+#certs-image {
+  width: 105px;
+  height: 105px;
+  margin: 1% auto;
+}
+
+#certs-name {
+  font-size: 1rem;
+  margin: auto;
+}
+
+#certs-issuer {
+  font-size: 0.7rem;
+  bottom: 0;
 }
 
 #back-to-top {
