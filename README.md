@@ -1,6 +1,6 @@
 ## Vian
 
-![banner](https://0x0.st/o-zt.png)
+![banner](https://0x0.st/oJdB.gif)
 
 Just another linux enthusiast.
 
