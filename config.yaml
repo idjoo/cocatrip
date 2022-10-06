@@ -3,8 +3,8 @@ quote:
   text: I prefer dangerous freedom over peaceful slavery.
   author: Thomas Jefferson
 avatar: /img/logo.png
-name: Adrianus Vian
-alt-name: cocatrip
+name: Adrianus Vian Habirowo
+alias: cocatrip
 desc: |
   I am a student at Bina Nusantara University, majoring in Cyber Security. Love
   using linux and been using it since 2019. Altough i major in Cyber Security i
@@ -30,3 +30,10 @@ techStack:
   icon: go-original
 - name: Python
   icon: python-original
+certs:
+- id: b93e45f7-d7c1-4c42-9c72-bc64b925412b
+  provider: credly
+- id: 9db5804d-fe53-42f8-9f9b-c2d474ac3956
+  provider: credly
+- id: 4fb0a5fd-ed6c-4071-af94-6a9b5c7b30a0
+  provider: credly
