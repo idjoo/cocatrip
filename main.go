@@ -14,6 +14,7 @@ func main() {
 	r.LoadHTMLGlob("./templates/*.tmpl.html")
 	r.Static("/css", "./static/css")
 	r.Static("/img", "./static/img")
+	r.Static("/sh", "./static/sh")
 	r.StaticFile("/favicon.ico", "./static/favicon.ico")
 
 	r.GET("/", controller.GetIndex)
