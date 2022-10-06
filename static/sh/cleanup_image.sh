@@ -4,12 +4,17 @@ RED='\033[0;31m'
 YELL='\033[1;33m'
 NC='\033[0m' # No Color
 
-IMAGES_TO_KEEP="1"
-IMAGE_REPO="gcr.io/ct-master"
+# KEEP=""
+# REPO=""
 
 # Get all images at the given image repo
 echo -e "${YELL}Getting all images${NC}"
-IMAGELIST=$(gcloud container images list --repository=${IMAGE_REPO} --format='get(name)')
+echo "gcloud container images list --repository=${REPO} --format='get(name)'"
+IMAGELIST=$(gcloud container images list --repository=${REPO} --format='get(name)')
+if (( ${#IMAGELIST[@]} == 0 )); then
+  echo -e "${RED}No image to cleanup${NC}"
+  exit 0
+fi
 echo "$IMAGELIST"
 
 while IFS= read -r IMAGENAME; do
@@ -20,13 +25,13 @@ while IFS= read -r IMAGENAME; do
   DIGESTLIST=$(gcloud container images list-tags ${IMAGENAME} --sort-by timestamp --format='get(digest)')
   DIGESTLISTCOUNT=$(echo "${DIGESTLIST}" | wc -l)
 
-  if [ ${IMAGES_TO_KEEP} -ge "${DIGESTLISTCOUNT}" ]; then
+  if [ ${KEEP} -ge "${DIGESTLISTCOUNT}" ]; then
     echo -e "${YELL}Found ${DIGESTLISTCOUNT} digests, nothing to delete${NC}"
     continue
   fi
 
   # Filter the ordered list to remove the most recent 3
-  DIGESTLISTTOREMOVE=$(echo "${DIGESTLIST}" | head -n -${IMAGES_TO_KEEP})
+  DIGESTLISTTOREMOVE=$(echo "${DIGESTLIST}" | head -n -${KEEP})
   DIGESTLISTTOREMOVECOUNT=$(echo "${DIGESTLISTTOREMOVE}" | wc -l)
 
   echo -e "${YELL}Found ${DIGESTLISTCOUNT} digests, ${DIGESTLISTTOREMOVECOUNT} to delete${NC}"
