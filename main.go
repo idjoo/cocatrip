@@ -6,20 +6,30 @@ import (
 )
 
 func main() {
-	r := gin.Default()
+	router := gin.Default()
 
-	r.Use(gin.Logger())
-	r.Delims("{{", "}}")
+	// templating options n shit
+	router.Delims("{{", "}}")
+	router.LoadHTMLGlob("./templates/*.tmpl.html")
 
-	r.LoadHTMLGlob("./templates/*.tmpl.html")
-	r.Static("/css", "./static/css")
-	r.Static("/img", "./static/img")
-	r.Static("/sh", "./static/sh")
-	r.StaticFile("/favicon.ico", "./static/favicon.ico")
+	// favicon
+	router.StaticFile("/favicon.ico", "./static/favicon.ico")
 
-	r.GET("/", controller.GetIndex)
-	r.GET("/github", controller.Redirect("https://github.com/cocatrip/"))
-	r.GET("/showwcase", controller.Redirect("https://cocatrip.showwcase.com/"))
+	// static folder
+	router.Static("/css", "./static/css")
+	router.Static("/img", "./static/img")
+	router.Static("/sh", "./static/sh")
 
-	r.Run()
+	// routing
+	router.GET("/", controller.GetIndex)
+	router.GET("/config", controller.GetConfig)
+
+	// redirect url
+	router.GET("/github", controller.Redirect("https://github.com/cocatrip/"))
+	router.GET("/reddit", controller.Redirect("https://reddit.com/u/cocatrip/"))
+	router.GET("/instagram", controller.Redirect("https://instagram.com/adr_vian/"))
+	router.GET("/showwcase", controller.Redirect("https://cocatrip.showwcase.com/"))
+
+  // serve
+	router.Run(":8080")
 }
