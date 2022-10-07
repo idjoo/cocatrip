@@ -93,7 +93,15 @@ td {
 #certs-table td {
   text-align: center;
   display: flex;
+  flex-direction: row;
 }
+
+@media (max-width: 920px) {
+  #certs-table td {
+    flex-direction: column;
+  }
+}
+
 
 #certs-cards {
   width: 240px;
