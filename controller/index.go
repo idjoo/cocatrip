@@ -7,7 +7,6 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"jaytaylor.com/html2text"
 )
 
 func GetIndex(c *gin.Context) {
@@ -15,9 +14,11 @@ func GetIndex(c *gin.Context) {
 	if err != nil {
 		log.Fatal(err)
 	}
+  
+  log.Println(c.Request.Header["User-Agent"][0])
 
 	if isHtmlOutput(c.Request.Header["User-Agent"][0]) {
-		c.HTML(http.StatusOK, "index.tmpl.html", gin.H{
+		c.HTML(http.StatusOK, "index.html", gin.H{
 			"Title":     config.Title,
 			"Quote":     config.Quote,
 			"Avatar":    config.Avatar,
@@ -28,19 +29,14 @@ func GetIndex(c *gin.Context) {
 			"Certs":     config.Certs,
 		})
 	} else {
-		t, err := template.ParseFiles("./templates/index.tmpl.html")
+		t, err := template.ParseFiles("./templates/index.md")
 		if err != nil {
 			log.Fatal(err)
 		}
 
 		var buffer bytes.Buffer
 		err = t.Execute(&buffer, config)
-		html := buffer.String()
-
-		output, err := html2text.FromString(html, html2text.Options{PrettyTables: true})
-		if err != nil {
-			log.Fatal(err)
-		}
+		output := buffer.String()
 
 		c.String(http.StatusOK, output)
 	}
