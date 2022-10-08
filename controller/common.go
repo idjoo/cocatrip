@@ -81,10 +81,11 @@ func readConfig() (models.Config, error) {
 }
 
 func isHtmlOutput(ua string) bool {
-	if strings.Contains(ua, "curl") || strings.Contains(ua, "wget") {
+	if strings.Contains(ua, "curl") ||
+  strings.Contains(ua, "Wget") ||
+  strings.Contains(ua, "Go-http-client") {
 		return false
 	} else {
 		return true
 	}
 }
-
