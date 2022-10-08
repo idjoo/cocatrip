@@ -33,7 +33,7 @@
 
   <div class="item desc">{{ .Desc }}</div>
   
-  <div class="item tech-stack-container">
+  <div id="tech-stack" class="item tech-stack-container">
     <a class="tech-stack-title" href="#tech-stack">Tech Stack</a>
 
     <div class="tech-list">
@@ -43,64 +43,18 @@
       {{ end }}
     </div>
   </div>
-</div>
 
-<!-- <body> -->
-<!--   <div class="container"> -->
-<!--     <div class="header"> -->
-<!---->
-<!---->
-<!--     </div> -->
-<!--     <div class="body"> -->
-<!---->
-<!--       <h2 id="tech-stack"><a href="#tech-stack">Tech Stack</a></h2> -->
-<!--       <table id="tech-stack-table"> -->
-<!--         {{ range .TechStack }} -->
-<!--         <tr> -->
-<!--           <td><p id="tech-name"><img id="tech-icon" src="{{ .Url }}" /> {{ .Name }}</p></td> -->
-<!--         </tr> -->
-<!--         {{ end }} -->
-<!--       </table> -->
-<!---->
-<!--       <h2 id="certs"><a href="#certs">Licenses & Certification</a></h2> -->
-<!--       <table id="certs-table"> -->
-<!--         <tr> -->
-<!--           <td> -->
-<!--           {{ range .Certs }} -->
-<!--             <div id="certs-cards"> -->
-<!--               <img id="certs-image" src="{{ .Image }}"> -->
-<!---->
-<!--               <span id="certs-name">{{ .Name }}</span> -->
-<!---->
-<!--               <div id="certs-issuer">{{ .Issuer }}</div> -->
-<!--             </div> -->
-<!--           {{ end }} -->
-<!--           </td> -->
-<!--         </tr> -->
-<!--       </table> -->
-<!--     </div> -->
-<!--     <div class="footer"></div> -->
+  <div id="certs" class="item certs-container">
+    <a class="certs-title" href="#certs">Licenses & Certification</a>
+
+    <div class="certs-list">
+      {{ range .Certs }}
+      <div class="certs-item">
+        <img class="certs-image" src="{{ .Image }}">
+        <div class="certs-name">{{ .Name }}</div>
+        <div class="certs-issuer">{{ .Issuer }}</div>
+      </div>
+      {{ end }}
+    </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <!-- <a href="#" id="back-to-top">&#9650</a> -->
-</body>
-
-</html>
+</div>

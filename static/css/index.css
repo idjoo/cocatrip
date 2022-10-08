@@ -16,7 +16,7 @@ html {
   display: flex;
   flex-direction: column;  
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem 4rem;
 }
 
@@ -81,21 +81,59 @@ html {
   min-width: 15rem;
   padding: 1em 0em;
 }
-/**/
-/* .tech-stack-container { */
-/*   margin: 0.5rem auto; */
-/*   min-width: 15rem; */
-/*   border: 1px dashed; */
-/*   border-collapse: collapse; */
-/* } */
-/**/
+
 .tech-icon {
   width: 1.5rem;
   height: 1.5rem;
 }
-/**/
-/* .tech-icon, .tech-name { */
-/*   margin: auto; */
-/*   vertical-align: middle; */
-/*   display: inline-block; */
-/* } */
+
+/* certs */
+.certs-container {
+  display: flex;
+  flex-direction: column;  
+  gap: 0.5rem;
+}
+
+.certs-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.certs-list {
+  display: flex; 
+  flex-direction: row;  
+  flex-wrap: wrap;
+  border: 1px dashed;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.certs-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content min-content min-content;
+  gap: 0.5em 0em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "."
+    "."
+    ".";
+  justify-items: center;
+  align-content: space-between;
+  max-width: 15rem;
+}
+
+.certs-image {
+  width: 105px;
+  height: 105px;
+}
+
+.certs-name {
+  font-weight: bold;
+}
+
+.certs-issuer {
+  font-size: small;
+  font-style: italic;
+}
