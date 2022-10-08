@@ -13,34 +13,35 @@
 
 <div class="container">
 
-  <img class="item" id="avatar" src="{{ .Avatar }}">
+  <img class="item avatar" src="{{ .Avatar }}">
 
-  <div class="item" id="name-container">
-    <div id="name">{{ .Name }}</div>
-    <div id="alias">{{ .Alias }}</div>
+  <div class="item name-container">
+    <a href="#">
+      <div class="name">{{ .Name }}</div>
+    </a>
+    <div class="alias">{{ .Alias }}</div>
   </div>
 
-  <div class="item" id="quote-container">
-    <div id="quote">
+  <div class="item quote-container">
+    <div class="quote">
       <q>{{ .Quote.Text }}</q>
     </div>
-    <div id="author">
+    <div class="author">
       &mdash; {{ .Quote.Author }}
     </div>
   </div>
 
-  <div class="item" id="desc">{{ .Desc }}</div>
+  <div class="item desc">{{ .Desc }}</div>
   
-  <div class="item" id="tech-stack">
-    <a href="#tech-stack">Tech Stack</a>
+  <div class="item tech-stack-container">
+    <a class="tech-stack-title" href="#tech-stack">Tech Stack</a>
 
-    <table id="tech-stack-container">
+    <div class="tech-list">
       {{ range .TechStack }}
-      <tr>
-        <td><p id="tech-name"><img id="tech-icon" src="{{ .Url }}" /> {{ .Name }}</p></td>
-      </tr>
+      <img class="tech-icon" src="{{ .Url }}" />
+      <div class="tech-name">{{ .Name }}</div>
       {{ end }}
-    </table>
+    </div>
   </div>
 </div>
 
