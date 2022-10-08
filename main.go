@@ -10,7 +10,7 @@ func main() {
 
 	// templating options n shit
 	router.Delims("{{", "}}")
-	router.LoadHTMLGlob("./templates/*.tmpl.html")
+	router.LoadHTMLGlob("./templates/*.html")
 
 	// favicon
 	router.StaticFile("/favicon.ico", "./static/favicon.ico")
