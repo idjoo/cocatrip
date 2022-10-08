@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+  <title>{{ .Title }}</title>
+</head>
+
+<div class="container">
+
+  <img class="item" id="avatar" src="{{ .Avatar }}">
+
+  <div class="item" id="name-container">
+    <div id="name">{{ .Name }}</div>
+    <div id="alias">{{ .Alias }}</div>
+  </div>
+
+  <div class="item" id="quote-container">
+    <div id="quote">
+      <q>{{ .Quote.Text }}</q>
+    </div>
+    <div id="author">
+      &mdash; {{ .Quote.Author }}
+    </div>
+  </div>
+
+  <div class="item" id="desc">{{ .Desc }}</div>
+  
+  <div class="item" id="tech-stack">
+    <a href="#tech-stack">Tech Stack</a>
+
+    <table id="tech-stack-container">
+      {{ range .TechStack }}
+      <tr>
+        <td><p id="tech-name"><img id="tech-icon" src="{{ .Url }}" /> {{ .Name }}</p></td>
+      </tr>
+      {{ end }}
+    </table>
+  </div>
+</div>
+
+<!-- <body> -->
+<!--   <div class="container"> -->
+<!--     <div class="header"> -->
+<!---->
+<!---->
+<!--     </div> -->
+<!--     <div class="body"> -->
+<!---->
+<!--       <h2 id="tech-stack"><a href="#tech-stack">Tech Stack</a></h2> -->
+<!--       <table id="tech-stack-table"> -->
+<!--         {{ range .TechStack }} -->
+<!--         <tr> -->
+<!--           <td><p id="tech-name"><img id="tech-icon" src="{{ .Url }}" /> {{ .Name }}</p></td> -->
+<!--         </tr> -->
+<!--         {{ end }} -->
+<!--       </table> -->
+<!---->
+<!--       <h2 id="certs"><a href="#certs">Licenses & Certification</a></h2> -->
+<!--       <table id="certs-table"> -->
+<!--         <tr> -->
+<!--           <td> -->
+<!--           {{ range .Certs }} -->
+<!--             <div id="certs-cards"> -->
+<!--               <img id="certs-image" src="{{ .Image }}"> -->
+<!---->
+<!--               <span id="certs-name">{{ .Name }}</span> -->
+<!---->
+<!--               <div id="certs-issuer">{{ .Issuer }}</div> -->
+<!--             </div> -->
+<!--           {{ end }} -->
+<!--           </td> -->
+<!--         </tr> -->
+<!--       </table> -->
+<!--     </div> -->
+<!--     <div class="footer"></div> -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!-- <a href="#" id="back-to-top">&#9650</a> -->
+</body>
+
+</html>
