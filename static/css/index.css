@@ -1,73 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Emoji&display=swap');
 
+/* global */
 * {
   font-family: 'Fira Code', monospace;
   background-color: #293329;
   color: #c5cac5;
 }
 
-html, body {
-  margin: 5% 10%;
-  scroll-behavior: smooth;
+/* base layout */
+.container {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 16px;
+  padding: 2rem 4rem;
 }
 
-#avatar {
+.item {
   text-align: center;
 }
 
-#avatar img {
+/* avatar image */
+#avatar {
   border-radius: 5%;
   width: 150px;
   height: auto;
 }
 
-#name {
-  text-align: center;
+/* name and alias */
+#name-container {
+  display: flex;
+  flex-direction: column;  
 }
 
-#alt-name {
-  text-align: center;
+#name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#alias {
   font-style: italic;
 }
 
-#quote {
-  display: grid;
+/* quote */
+#quote-container {  
+  display: flex;
+  flex-direction: column;  
+  align-items: flex-end;
 }
 
-#quote blockquote {
-  text-align: center;
-  display: inline-grid;
-  justify-content: center;
-}
-
-#quote blockquote span {
-  text-align: right;
-}
-
+/* description */
 #desc {
   text-align: justify;
+  max-width: 50rem;
 }
 
-table, th{
+/* tech stack */
+#tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   border: 1px dashed;
   border-collapse: collapse;
-}
-
-th {
-  padding: 10px;
-}
-
-td {
-  padding: 10px;
-}
-
-#tech-stack {
-  text-align: center;
-}
-
-#tech-stack-table {
-  margin: 16px auto;
-  min-width: 15rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 #tech-icon {
@@ -76,62 +73,7 @@ td {
 }
 
 #tech-icon, #tech-name {
-  margin: auto;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-#certs {
-  text-align: center;
-}
-
-#certs-table {
-  margin: 16px auto;
-  min-width: 15rem;
-}
-
-#certs-table td {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-}
-
-@media (max-width: 920px) {
-  #certs-table td {
-    flex-direction: column;
-  }
-}
-
-
-#certs-cards {
-  width: 240px;
-  height: 240px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 0px auto;
-}
-
-#certs-image {
-  width: 105px;
-  height: 105px;
-  margin: 1% auto;
-}
-
-#certs-name {
-  font-size: 1rem;
-  margin: auto;
-}
-
-#certs-issuer {
-  font-size: 0.7rem;
-  bottom: 0;
-}
-
-#back-to-top {
-	background: rgba(0, 0, 0, 0);
-  font-size: 3rem;
-  position: fixed;
-  bottom: 10px;
-  right: 20px; 
+  /* margin: auto; */
+  /* vertical-align: middle; */
+  /* display: inline-block; */
 }
