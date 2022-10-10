@@ -27,9 +27,11 @@ func main() {
 	// redirect url
 	router.GET("/github", controller.Redirect("https://github.com/cocatrip/"))
 	router.GET("/reddit", controller.Redirect("https://reddit.com/u/cocatrip/"))
+	router.GET("/gitea", controller.Redirect("https://git.cocatrip.xyz/cocatrip/"))
 	router.GET("/instagram", controller.Redirect("https://instagram.com/adr_vian/"))
 	router.GET("/showwcase", controller.Redirect("https://cocatrip.showwcase.com/"))
+	router.GET("/dotfiles", controller.Redirect("https://git.cocatrip.xyz/cocatrip/dotfiles"))
 
-  // serve
+	// serve
 	router.Run(":8080")
 }
