@@ -16,8 +16,6 @@ desc: |
 techStack:
 - name: Linux
   icon: linux-original
-- name: Jenkins
-  icon: jenkins-original
 - name: Bash
   url: https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/SVG/64x64_white.svg
 - name: Neovim
@@ -26,6 +24,8 @@ techStack:
   icon: docker-original
 - name: Kubernetes
   icon: kubernetes-plain
+- name: Jenkins
+  icon: jenkins-original
 - name: Go
   icon: go-original
 - name: Python
