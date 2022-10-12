@@ -1,20 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Emoji&display=swap');
-
-/* global */
-* {
-  font-family: 'Fira Code', monospace;
-  background-color: #293329;
-  color: #c5cac5;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
 /* base layout */
 .container {
   display: flex;
