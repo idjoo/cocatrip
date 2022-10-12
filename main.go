@@ -17,8 +17,6 @@ func main() {
 
 	// static folder
 	router.Static("/css", "./static/css")
-	router.Static("/img", "./static/img")
-	router.Static("/sh", "./static/sh")
 
 	// routing
 	router.GET("/", controller.GetIndex)
