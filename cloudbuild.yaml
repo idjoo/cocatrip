@@ -24,7 +24,7 @@ images:
 - '${_IMAGE_NAME}'
 
 substitutions:
-  _IMAGE_NAME: 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/ct-docker/cocatrip:$COMMIT_SHA'
+  _IMAGE_NAME: 'asia-southeast1-docker.pkg.dev/${PROJECT_ID}/ct-docker/cocatrip:${COMMIT_SHA}'
 
 options:
   logging: CLOUD_LOGGING_ONLY
