@@ -1,11 +1,11 @@
 steps:
 # build image
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA', '.' ]
+  args: ['build', '-t', '${_IMAGE_NAME}', '.']
   
 # push image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA']
+  args: ['push', '${_IMAGE_NAME}']
 
 # deploy image
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -15,13 +15,17 @@ steps:
   - 'deploy'
   - 'cocatrip'
   - '--service-account=cocatrip@ct-master.iam.gserviceaccount.com'
-  - '--image=asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA'
+  - '--image=${_IMAGE_NAME}'
   - '--region=asia-southeast1'
   - '--allow-unauthenticated'
   - '--port=8080'
 
 images:
-- 'asia.gcr.io/$PROJECT_ID/cocatrip:$COMMIT_SHA'
+- '${_IMAGE_NAME}'
+
+substitutions:
+  _IMAGE_NAME: 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/ct-docker/cocatrip:$COMMIT_SHA'
 
 options:
   logging: CLOUD_LOGGING_ONLY
+  dynamic_substitutions: true
