@@ -23,14 +23,13 @@ steps:
 # delete older image
 - name: 'asia-docker.pkg.dev/gcr-cleaner/gcr-cleaner/gcr-cleaner-cli'
   args:
-  - '--repo=asia-southeast1-docker.pkg.dev/${PROJECT_ID}/ct-docker/cocatrip'
-  - '--keep=1'
+  - '--repo=asia-docker.pkg.dev/${PROJECT_ID}/ct-docker/cocatrip'
 
 images:
 - '${_IMAGE_NAME}'
 
 substitutions:
-  _IMAGE_NAME: 'asia-southeast1-docker.pkg.dev/${PROJECT_ID}/ct-docker/cocatrip:${COMMIT_SHA}'
+  _IMAGE_NAME: 'asia-docker.pkg.dev/${PROJECT_ID}/ct-docker/cocatrip:${COMMIT_SHA}'
 
 options:
   logging: CLOUD_LOGGING_ONLY
