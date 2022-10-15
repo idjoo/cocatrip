@@ -20,6 +20,12 @@ steps:
   - '--allow-unauthenticated'
   - '--port=8080'
 
+# delete older image
+- name: 'asia-docker.pkg.dev/gcr-cleaner/gcr-cleaner/gcr-cleaner-cli'
+  args:
+  - '--repo=asia-southeast1-docker.pkg.dev/${PROJECT_ID}/ct-docker/cocatrip'
+  - '--keep=1'
+
 images:
 - '${_IMAGE_NAME}'
 
