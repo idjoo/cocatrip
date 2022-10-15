@@ -14,14 +14,14 @@ func GetIndex(c *gin.Context) {
 	if err != nil {
 		log.Fatal(err)
 	}
-  
-  log.Println(c.Request.Header["User-Agent"][0])
+
+	log.Println(c.Request.Header["User-Agent"][0])
 
 	if isHtmlOutput(c.Request.Header["User-Agent"][0]) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
 			"Title":     config.Title,
 			"Quote":     config.Quote,
-			"Avatar":    config.Avatar,
+			"Logo":      config.Logo,
 			"Name":      config.Name,
 			"Alias":     config.Alias,
 			"Desc":      config.Desc,

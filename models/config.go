@@ -6,7 +6,7 @@ type Config struct {
 		Text   string `yaml:"text"`
 		Author string `yaml:"author"`
 	} `yaml:"quote"`
-	Avatar    string `yaml:"avatar"`
+	Logo    string `yaml:"logo"`
 	Name      string `yaml:"name"`
 	Alias     string `yaml:"alias"`
 	Desc      string `yaml:"desc"`

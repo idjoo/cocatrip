@@ -1,6 +1,6 @@
 % {{ .Title }}
 
-![Avatar]({{ .Avatar }})
+![Logo]({{ .Logo }})
 
 # {{ .Name }} ({{ .Alias }})
 
