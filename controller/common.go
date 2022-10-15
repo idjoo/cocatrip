@@ -11,37 +11,6 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-func getCredlyData(id string) (models.Credly, error) {
-	var credly models.Credly
-
-	client := &http.Client{}
-
-  url := fmt.Sprintf("https://www.credly.com/api/v1/public_badges/%s", id)
-
-	req, err := http.NewRequest("GET", url, nil)
-	if err != nil {
-		return credly, err
-	}
-
-	res, err := client.Do(req)
-	if err != nil {
-		return credly, err
-	}
-	defer res.Body.Close()
-
-	bodyBytes, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		return credly, err
-	}
-
-	err = json.Unmarshal(bodyBytes, &credly)
-	if err != nil {
-		return credly, err
-	}
-
-  return credly, err
-}
-
 func readConfig() (models.Config, error) {
 	var config models.Config
 
@@ -89,3 +58,35 @@ func isHtmlOutput(ua string) bool {
 		return true
 	}
 }
+
+func getCredlyData(id string) (models.Credly, error) {
+	var credly models.Credly
+
+	client := &http.Client{}
+
+  url := fmt.Sprintf("https://www.credly.com/api/v1/public_badges/%s", id)
+
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		return credly, err
+	}
+
+	res, err := client.Do(req)
+	if err != nil {
+		return credly, err
+	}
+	defer res.Body.Close()
+
+	bodyBytes, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return credly, err
+	}
+
+	err = json.Unmarshal(bodyBytes, &credly)
+	if err != nil {
+		return credly, err
+	}
+
+  return credly, err
+}
+
