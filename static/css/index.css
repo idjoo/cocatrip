@@ -109,6 +109,7 @@
   justify-items: center;
   align-content: space-between;
   max-width: 15rem;
+  text-decoration: none;
 }
 
 .certs-image {
