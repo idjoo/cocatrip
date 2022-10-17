@@ -50,11 +50,11 @@
 
     <div class="certs-list">
       {{ range .Certs }}
-      <div class="certs-item">
-        <img class="certs-image" src="{{ .Image }}">
-        <div class="certs-name">{{ .Name }}</div>
-        <div class="certs-issuer">{{ .Issuer }}</div>
-      </div>
+      <a class="certs-item" href="{{ .Url }}">
+          <img class="certs-image" src="{{ .Image }}">
+          <div class="certs-name">{{ .Name }}</div>
+          <div class="certs-issuer">{{ .Issuer }}</div>
+      </a>
       {{ end }}
     </div>
   </div>
