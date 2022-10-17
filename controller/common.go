@@ -34,14 +34,15 @@ func readConfig() (models.Config, error) {
 		if config.Certs[i].Id != "" {
 			switch config.Certs[i].Provider {
 			case "credly":
-        credly, err := getCredlyData(config.Certs[i].Id)
-        if err != nil {
-          return config, err
-        }
-        
-        config.Certs[i].Name = credly.Data.BadgeTemplate.Name
-        config.Certs[i].Image = credly.Data.BadgeTemplate.ImageURL
-        config.Certs[i].Issuer = credly.Data.Issuer.Summary
+				credly, err := getCredlyData(config.Certs[i].Id)
+				if err != nil {
+					return config, err
+				}
+
+				config.Certs[i].Name = credly.Data.BadgeTemplate.Name
+				config.Certs[i].Image = credly.Data.BadgeTemplate.ImageURL
+				config.Certs[i].Issuer = credly.Data.Issuer.Summary
+				config.Certs[i].Url = fmt.Sprintf("https://www.credly.com/badges/%s/public_url", config.Certs[i].Id)
 			}
 		}
 	}
@@ -51,8 +52,8 @@ func readConfig() (models.Config, error) {
 
 func isHtmlOutput(ua string) bool {
 	if strings.Contains(ua, "curl") ||
-  strings.Contains(ua, "Wget") ||
-  strings.Contains(ua, "Go-http-client") {
+		strings.Contains(ua, "Wget") ||
+		strings.Contains(ua, "Go-http-client") {
 		return false
 	} else {
 		return true
@@ -64,7 +65,7 @@ func getCredlyData(id string) (models.Credly, error) {
 
 	client := &http.Client{}
 
-  url := fmt.Sprintf("https://www.credly.com/api/v1/public_badges/%s", id)
+	url := fmt.Sprintf("https://www.credly.com/api/v1/public_badges/%s", id)
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -87,6 +88,5 @@ func getCredlyData(id string) (models.Credly, error) {
 		return credly, err
 	}
 
-  return credly, err
+	return credly, err
 }
-
