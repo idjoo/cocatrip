@@ -24,10 +24,13 @@ func main() {
 	router.GET("/config", controller.GetConfig)
 
 	// redirect url
-	router.GET("/github", controller.Redirect("https://github.com/cocatrip/"))
-	router.GET("/reddit", controller.Redirect("https://reddit.com/u/cocatrip/"))
-	router.GET("/instagram", controller.Redirect("https://instagram.com/adr_vian/"))
-	router.GET("/showwcase", controller.Redirect("https://cocatrip.showwcase.com/"))
+	router.GET("/github", controller.Redirect("https://github.com/cocatrip"))
+	router.GET("/twitter", controller.Redirect("https://twitter.com/cocatrip"))
+	router.GET("/reddit", controller.Redirect("https://reddit.com/u/cocatrip"))
+	router.GET("/instagram", controller.Redirect("https://instagram.com/adr_vian"))
+	router.GET("/showwcase", controller.Redirect("https://cocatrip.showwcase.com"))
+	router.GET("/facebook", controller.Redirect("https://fb.com/adrianus.vian"))
+	router.GET("/telegram", controller.Redirect("https://t.me/adr_vian"))
 	router.GET("/dotfiles", controller.Redirect("https://github.com/cocatrip/dotfiles"))
 
 	// serve
