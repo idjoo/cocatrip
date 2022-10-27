@@ -23,4 +23,10 @@ type Config struct {
 		Issuer   string `yaml:"issuer"`
 		Url      string `yaml:"url"`
 	} `yaml:"certs"`
+	SocialMedia []struct {
+		Name    string `yaml:"name"`
+		Icon    string `yaml:"icon"`
+		User    string `yaml:"user"`
+		Url     string `yaml:"url"`
+	} `yaml:"socialMedia"`
 }

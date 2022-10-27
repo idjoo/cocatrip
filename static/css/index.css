@@ -102,10 +102,6 @@
   grid-template-rows: max-content min-content min-content;
   gap: 0.5em 0em;
   grid-auto-flow: row;
-  grid-template-areas:
-    "."
-    "."
-    ".";
   justify-items: center;
   align-content: space-between;
   max-width: 15rem;
@@ -124,4 +120,44 @@
 .certs-issuer {
   font-size: small;
   font-style: italic;
+}
+
+/* social media */
+.social-container {
+  display: flex;
+  flex-direction: column;  
+  gap: 0.5rem;
+}
+
+.social-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.social-list {
+  display: flex; 
+  flex-direction: row;  
+  flex-wrap: wrap;
+  border: 1px dashed;
+  justify-content: space-evenly;
+  gap: 1em 0em;
+  padding: 1em;
+}
+
+.social-item {
+  display: grid; 
+  grid-template-columns: min-content max-content; 
+  gap: 1em 0.5em; 
+  justify-content: center; 
+  justify-items: start; 
+  min-width: 10rem;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.social-user {
+  font-weight: bold;
 }

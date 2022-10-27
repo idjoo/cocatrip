@@ -47,6 +47,27 @@ func readConfig() (models.Config, error) {
 		}
 	}
 
+	for i := 0; i < len(config.SocialMedia); i++ {
+    switch config.SocialMedia[i].Name {
+    case "github":
+      config.SocialMedia[i].Icon = "https://cdn-icons-png.flaticon.com/512/733/733609.png"
+    case "instagram":
+      config.SocialMedia[i].Icon = "https://cdn-icons-png.flaticon.com/512/3955/3955024.png"
+    case "facebook":
+      config.SocialMedia[i].Icon = "https://cdn-icons-png.flaticon.com/512/145/145802.png"
+    case "twitter":
+      config.SocialMedia[i].Icon = "https://cdn-icons-png.flaticon.com/512/3670/3670151.png"
+    case "showwcase":
+      config.SocialMedia[i].Icon = "https://github.com/Showwcase.png"
+    case "reddit":
+      config.SocialMedia[i].Icon = "https://cdn-icons-png.flaticon.com/512/3670/3670226.png"
+    case "telegram":
+      config.SocialMedia[i].Icon = "https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+    }
+
+    config.SocialMedia[i].Url = fmt.Sprintf("https://cocatrip.xyz/%s", config.SocialMedia[i].Name)
+	}
+
 	return config, nil
 }
 

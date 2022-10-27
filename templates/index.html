@@ -58,4 +58,19 @@
       {{ end }}
     </div>
   </div>
+
+  <footer>
+    <div id="social" class="item social-container">
+      <a class="social-title" href="#social">Social Media</a>
+
+      <div class="social-list">
+        {{ range .SocialMedia }}
+        <a class="social-item" href="{{ .Url }}">
+            <img class="social-icon" src="{{ .Icon }}">
+            <div class="social-user">{{ .User }}</div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </footer>
 </div>

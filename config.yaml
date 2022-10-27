@@ -1,4 +1,4 @@
-title: Profile
+title: cocatrip - Home
 quote: 
   text: I prefer dangerous freedom over peaceful slavery.
   author: Thomas Jefferson
@@ -37,3 +37,16 @@ certs:
   provider: credly
 - id: 4fb0a5fd-ed6c-4071-af94-6a9b5c7b30a0
   provider: credly
+socialMedia:
+- name: github
+  user: cocatrip
+- name: twitter
+  user: cocatrip
+- name: reddit
+  user: cocatrip
+- name: instagram
+  user: adr_vian
+- name: telegram
+  user: adr_vian
+- name: facebook
+  user: adrianus.vian

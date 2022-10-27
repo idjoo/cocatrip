@@ -27,6 +27,7 @@ func GetIndex(c *gin.Context) {
 			"Desc":      config.Desc,
 			"TechStack": config.TechStack,
 			"Certs":     config.Certs,
+			"SocialMedia":     config.SocialMedia,
 		})
 	} else {
 		t, err := template.ParseFiles("./templates/index.md")
