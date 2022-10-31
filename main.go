@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-  // declare router
+	// declare router
 	router := gin.Default()
 
 	// templating options n shit
