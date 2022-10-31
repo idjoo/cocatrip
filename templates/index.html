@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-  <link rel="stylesheet" type="text/css" href="https://ember.cocatrip.xyz/global.css"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+  <link rel="stylesheet" type="text/css" href="https://ember.cocatrip.xyz/global.css" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
 
   <title>{{ .Title }}</title>
+
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ .Logo }}" />
 </head>
 
 <div class="container">
@@ -33,7 +38,7 @@
   </div>
 
   <div class="item desc">{{ .Desc }}</div>
-  
+
   <div id="tech-stack" class="item tech-stack-container">
     <a class="tech-stack-title" href="#tech-stack">Tech Stack</a>
 
@@ -51,9 +56,9 @@
     <div class="certs-list">
       {{ range .Certs }}
       <a class="certs-item" href="{{ .Url }}">
-          <img class="certs-image" src="{{ .Image }}">
-          <div class="certs-name">{{ .Name }}</div>
-          <div class="certs-issuer">{{ .Issuer }}</div>
+        <img class="certs-image" src="{{ .Image }}">
+        <div class="certs-name">{{ .Name }}</div>
+        <div class="certs-issuer">{{ .Issuer }}</div>
       </a>
       {{ end }}
     </div>
@@ -66,8 +71,8 @@
       <div class="social-list">
         {{ range .SocialMedia }}
         <a class="social-item" href="{{ .Url }}">
-            <img class="social-icon" src="{{ .Icon }}">
-            <div class="social-user">{{ .User }}</div>
+          <img class="social-icon" src="{{ .Icon }}">
+          <div class="social-user">{{ .User }}</div>
         </a>
         {{ end }}
       </div>
