@@ -37,6 +37,8 @@ certs:
   provider: credly
 - id: 4fb0a5fd-ed6c-4071-af94-6a9b5c7b30a0
   provider: credly
+- id: 5347f3bf-2356-4859-9a76-53f6179ba64b
+  provider: credly
 socialMedia:
 - name: github
   user: cocatrip
