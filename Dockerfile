@@ -21,6 +21,6 @@ COPY . .
 
 COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:0.5.0 /lambda-adapter /opt/extensions/lambda-adapter
 
-COPY --from=builder /usr/local/bin/app /usr/local/bin/app
+COPY --from=builder /usr/local/bin/app /
 
-ENTRYPOINT ["app"]
+ENTRYPOINT ["/app"]
