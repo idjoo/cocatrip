@@ -12,39 +12,39 @@
 
   <title>{{ .Title }}</title>
 
-  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:title" content="{{ .Config.Title }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{{ .Logo }}" />
-  <meta property="og:description" content="{{ .Desc }}" />
+  <meta property="og:image" content="{{ .Config.Logo }}" />
+  <meta property="og:description" content="{{ .Config.Desc }}" />
 </head>
 
 <div class="container">
 
-  <img class="item logo" src="{{ .Logo }}">
+  <img class="item logo" src="{{ .Config.Logo }}">
 
   <div class="item name-container">
     <a href="#">
-      <div class="name">{{ .Name }}</div>
+      <div class="name">{{ .Config.Name }}</div>
     </a>
-    <div class="alias">{{ .Alias }}</div>
+    <div class="alias">{{ .Config.Alias }}</div>
   </div>
 
   <div class="item quote-container">
     <div class="quote">
-      <q>{{ .Quote.Text }}</q>
+      <q>{{ .Config.Quote.Text }}</q>
     </div>
     <div class="author">
-      &mdash; {{ .Quote.Author }}
+      &mdash; {{ .Config.Quote.Author }}
     </div>
   </div>
 
-  <div class="item desc">{{ .Desc }}</div>
+  <div class="item desc">{{ .Config.Desc }}</div>
 
   <div id="tech-stack" class="item tech-stack-container">
     <a class="tech-stack-title" href="#tech-stack">Tech Stack</a>
 
     <div class="tech-list">
-      {{ range .TechStack }}
+      {{ range .Config.TechStack }}
       <img class="tech-icon" src="{{ .Url }}" />
       <div class="tech-name">{{ .Name }}</div>
       {{ end }}
@@ -55,7 +55,7 @@
     <a class="certs-title" href="#certs">Licenses & Certification</a>
 
     <div class="certs-list">
-      {{ range .Certs }}
+      {{ range .Config.Certs }}
       <a class="certs-item" href="{{ .Url }}">
         <img class="certs-image" src="{{ .Image }}">
         <div class="certs-name">{{ .Name }}</div>
@@ -70,7 +70,7 @@
       <a class="social-title" href="#social">Social Media</a>
 
       <div class="social-list">
-        {{ range .SocialMedia }}
+        {{ range .Config.SocialMedia }}
         <a class="social-item" href="{{ .Url }}">
           <img class="social-icon" src="{{ .Icon }}">
           <div class="social-user">{{ .User }}</div>
