@@ -22,8 +22,11 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - echo Writing image definitions file...
-      - printf '[{"name":"cocatrip","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - echo Updating lambda function...
+      - |
+        aws lambda update-function-code --function-name cocatrip \
+          --region ap-southeast-1 \
+          --image-uri $REPOSITORY_URI:$IMAGE_TAG
 
 artifacts:
   files: imagedefinitions.json
