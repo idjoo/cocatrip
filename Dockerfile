@@ -15,12 +15,14 @@ FROM golang:1.19-alpine
 
 ENV GIN_MODE=release
 
+ENV READINESS_CHECK_PORT=7531
+
+ENV PORT=7531
+
 WORKDIR /usr/src/app
 
 COPY . .
 
-ENV READINESS_CHECK_PORT=7531
-ENV PORT=7531
 COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:0.5.0 /lambda-adapter /opt/extensions/lambda-adapter
 
 COPY --from=builder /usr/local/bin/app /
