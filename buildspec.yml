@@ -23,10 +23,7 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Updating lambda function...
-      - |
+      - |-
         aws lambda update-function-code --function-name cocatrip \
-          --region ap-southeast-1 \
+          --region $AWS_DEFAULT_REGION \
           --image-uri $REPOSITORY_URI:$IMAGE_TAG
-
-artifacts:
-  files: imagedefinitions.json
