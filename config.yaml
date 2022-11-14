@@ -1,11 +1,12 @@
+---
 title: cocatrip - Home
-quote: 
+quote:
   text: I prefer dangerous freedom over peaceful slavery.
   author: Thomas Jefferson
 logo: https://ember.cocatrip.xyz/img/logo.png
 name: Adrianus Vian Habirowo
 alias: cocatrip
-desc: |
+desc: |-
   I am a student at Bina Nusantara University, majoring in Cyber Security. Love
   using linux and been using it since 2019. Altough i major in Cyber Security i
   don’t like doing Cyber Security stuff, it’s just a way for me to learn linux
@@ -14,41 +15,41 @@ desc: |
   with kubernetes, working on my homelab, deploying an application, and other
   kind of stuff similar to that.
 techStack:
-- name: Linux
-  icon: linux-original
-- name: Bash
-  url: https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/SVG/64x64_white.svg
-- name: Neovim
-  url: https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg
-- name: Docker
-  icon: docker-original
-- name: Kubernetes
-  icon: kubernetes-plain
-- name: Jenkins
-  icon: jenkins-original
-- name: Go
-  icon: go-original
-- name: Python
-  icon: python-original
+  - name: Linux
+    icon: linux-original
+  - name: Bash
+    url: https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/SVG/64x64_white.svg
+  - name: Neovim
+    url: https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg
+  - name: Docker
+    icon: docker-original
+  - name: Kubernetes
+    icon: kubernetes-plain
+  - name: Jenkins
+    icon: jenkins-original
+  - name: Go
+    icon: go-original
+  - name: Python
+    icon: python-original
 certs:
-- id: b93e45f7-d7c1-4c42-9c72-bc64b925412b
-  provider: credly
-- id: 9db5804d-fe53-42f8-9f9b-c2d474ac3956
-  provider: credly
-- id: 4fb0a5fd-ed6c-4071-af94-6a9b5c7b30a0
-  provider: credly
-- id: 5347f3bf-2356-4859-9a76-53f6179ba64b
-  provider: credly
+  - id: b93e45f7-d7c1-4c42-9c72-bc64b925412b
+    provider: credly
+  - id: 9db5804d-fe53-42f8-9f9b-c2d474ac3956
+    provider: credly
+  - id: 4fb0a5fd-ed6c-4071-af94-6a9b5c7b30a0
+    provider: credly
+  - id: 5347f3bf-2356-4859-9a76-53f6179ba64b
+    provider: credly
 socialMedia:
-- name: github
-  user: cocatrip
-- name: twitter
-  user: cocatrip
-- name: reddit
-  user: cocatrip
-- name: instagram
-  user: adr_vian
-- name: telegram
-  user: adr_vian
-- name: facebook
-  user: adrianus.vian
+  - name: github
+    user: cocatrip
+  - name: twitter
+    user: cocatrip
+  - name: reddit
+    user: cocatrip
+  - name: instagram
+    user: adr_vian
+  - name: telegram
+    user: adr_vian
+  - name: facebook
+    user: adrianus.vian
