@@ -21,6 +21,7 @@ func main() {
 
 	// routing
 	router.GET("/", controller.GetIndex)
+	router.GET("/pay", controller.GetPay)
 	router.GET("/config", controller.GetConfig)
 
 	// redirect url
