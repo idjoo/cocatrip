@@ -31,8 +31,3 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - echo Updating lambda function...
-      - |-
-        aws lambda update-function-code --function-name cocatrip \
-          --region $AWS_DEFAULT_REGION \
-          --image-uri $REPOSITORY_URI:$IMAGE_TAG
