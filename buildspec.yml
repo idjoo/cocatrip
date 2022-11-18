@@ -1,6 +1,10 @@
 ---
 version: 0.2
 
+env:
+  secrets-manager:
+    DOCKER_PAT: "docker:pat"
+
 phases:
   pre_build:
     commands:
@@ -16,6 +20,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - echo Loging in to Docker Hub
+      - docker login --username cocatrip --password $DOCKER_PAT
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
