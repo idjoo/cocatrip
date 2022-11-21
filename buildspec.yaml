@@ -8,7 +8,6 @@ env:
 phases:
   pre_build:
     commands:
-      - aws --version
       - REPOSITORY_URI=542780149388.dkr.ecr.ap-southeast-1.amazonaws.com/cocatrip
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
@@ -17,14 +16,16 @@ phases:
         aws ecr get-login-password --region $AWS_DEFAULT_REGION | \
           docker login --username AWS --password-stdin \
           542780149388.dkr.ecr.ap-southeast-1.amazonaws.com
+
   build:
     commands:
       - echo Build started on `date`
-      - echo Loging in to Docker Hub
+      - echo Login to Docker Hub
       - docker login --username cocatrip --password $DOCKER_PAT
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+
   post_build:
     commands:
       - echo Build completed on `date`
