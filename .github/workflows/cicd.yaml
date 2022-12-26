@@ -35,4 +35,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cocatrip:latest,${{ secrets.DOCKERHUB_USERNAME }}/cocatrip:${{ env.GITHUB_SHA }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cocatrip:latest,${{ secrets.DOCKERHUB_USERNAME }}/cocatrip@sha256:${{ env.GITHUB_SHA }}
