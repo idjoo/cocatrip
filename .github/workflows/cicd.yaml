@@ -5,6 +5,12 @@ on:
   push:
     branches:
       - "master"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to run tests against"
+        type: environment
+        required: true
 
 jobs:
   build:
@@ -28,5 +34,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags:
-            ${{ secrets.DOCKERHUB_USERNAME }}/cocatrip:latest,${{ secrets.DOCKERHUB_USERNAME }}/cocatrip:${{ env.GITHUB_SHA }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cocatrip:latest,${{ secrets.DOCKERHUB_USERNAME }}/cocatrip:${{ env.GITHUB_SHA }}
