@@ -19,11 +19,10 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ${{ github.repository_owner }}/cocatrip
             ghcr.io/${{ github.repository_owner }}/cocatrip
           tags: |
-            type=ref,event=branch
-            type=sha
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=,enable=true
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -33,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ github.token }}
 
       - name: Build and Push
         uses: docker/build-push-action@v3
@@ -42,6 +41,21 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-  deploy:
-    environment: master
-    runs-on: ubuntu-latest
+
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+
+      - name: 'Deploy'
+        uses: 'deliverybot/helm@v1'
+        with:
+          release: 'cocatrip'
+          namespace: 'default'
+          chart: 'app'
+          token: '${{ github.token }}'
+          values: |
+            image.tag: ${{ steps.meta.outputs.tags[0] }}
+          value-files: "values.yaml"
+        env:
+          KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
