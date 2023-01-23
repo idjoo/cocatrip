@@ -47,15 +47,11 @@ jobs:
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
 
-      - name: 'Deploy'
-        uses: 'deliverybot/helm@v1.7.0'
+      - name: Deploy
+        uses: WyriHaximus/github-action-helm3@v2
         with:
-          release: 'cocatrip'
-          namespace: 'default'
-          chart: 'app'
-          token: '${{ github.token }}'
-          values: |
-            image.tag: ${{ steps.meta.outputs.tags[0] }}
-          value-files: "values.yaml"
-        env:
-          KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
+          exec: |
+            helm upgrade --install --wait --atomic \
+                --create-namespace --namespace=cocatrip \
+                cocatrip ./chart --values=./chart/values.yaml
+          kubeconfig: '${{ secrets.KUBECONFIG }}'
