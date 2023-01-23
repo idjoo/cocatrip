@@ -48,7 +48,7 @@ jobs:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
 
       - name: 'Deploy'
-        uses: 'deliverybot/helm@v1'
+        uses: 'deliverybot/helm@v1.7.0'
         with:
           release: 'cocatrip'
           namespace: 'default'
