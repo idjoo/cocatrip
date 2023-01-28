@@ -16,6 +16,7 @@ jobs:
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
           version: 1.34.2
+          hostname: ct-runner
 
       - name: Checkout
         uses: actions/checkout@v3
@@ -52,7 +53,7 @@ jobs:
         uses: WyriHaximus/github-action-helm3@v2
         with:
           exec: |
-            helm upgrade --install --wait --atomic \
+            helm upgrade --install --wait \
                 --create-namespace --namespace=cocatrip \
                 cocatrip ./chart --values=./chart/values.yaml
           kubeconfig: '${{ secrets.KUBECONFIG }}'
