@@ -65,7 +65,7 @@ jobs:
         with:
           kubeconfig: '${{ secrets.KUBECONFIG }}'
           exec: |
-            helm upgrade --install --wait \
+            helm upgrade --install \
                 --create-namespace --namespace=cocatrip \
                 cocatrip ./chart --values=./chart/values.yaml \
                 --set=image.tag=${{ steps.meta.outputs.tags[1] }}
