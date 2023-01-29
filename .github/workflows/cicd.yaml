@@ -47,11 +47,25 @@ jobs:
     runs-on: self-hosted
     needs: build
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            ghcr.io/${{ github.repository_owner }}/cocatrip
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=,enable=true
+
       - name: Deploy
         uses: WyriHaximus/github-action-helm3@v2
         with:
+          kubeconfig: '${{ secrets.KUBECONFIG }}'
           exec: |
             helm upgrade --install --wait \
                 --create-namespace --namespace=cocatrip \
-                cocatrip ./chart --values=./chart/values.yaml
-          kubeconfig: '${{ secrets.KUBECONFIG }}'
+                cocatrip ./chart --values=./chart/values.yaml \
+                --set=image.tag=${{ steps.meta.outputs.tags[1] }}
